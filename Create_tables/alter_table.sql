@@ -30,14 +30,14 @@ DROP COLUMN Horario;
 -- desconto (ajustes: valor não deve ser chave primária e sim um atributo id deve ser atribuido como pk):
 -- Ao ajustar a desconto, é necessário também modificar a referência do Aniversariante & Pedido.
 
--- Remover as chaves estrangeiras que referenciam a tabela Desconto
+-- Removendo as chaves estrangeiras que referenciam a tabela Desconto
 ALTER TABLE Aniversariante
 DROP CONSTRAINT aniversariante_valor_fkey;
 
 ALTER TABLE Pedido
 DROP CONSTRAINT pedido_valor_fkey;
 
--- Remover a chave primária atual da tabela Desconto
+-- Removendo a chave primária atual da tabela Desconto
 ALTER TABLE Desconto
 DROP CONSTRAINT desconto_pkey;
 
@@ -59,5 +59,5 @@ ADD FOREIGN KEY (id_desconto) REFERENCES Desconto(id);
 ALTER TABLE Pedido
 ADD FOREIGN KEY (id_desconto) REFERENCES Desconto(id);
 
--- removendo a coluna valor da tabela aniversariante
+-- Removendo a coluna valor da tabela aniversariante
 ALTER TABLE aniversariante DROP COLUMN valor;
