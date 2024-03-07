@@ -42,6 +42,7 @@ Este comando executa o seguinte:
 Os comandos sql para criação das tabelas pode ser encontrado [aqui](Create_tables/create.sql).
 
 - Diagrama de classes ER:
+
 ![aqui](imgs/diagrama_er.png)
 
 
@@ -53,32 +54,44 @@ Os comandos sql para Alter Table das tabelas pode ser encontrado [aqui](Create_t
 
 # Inserts:
 
-Os comandos de inserts das tabelas do banco de dados cervejaria podem ser encontrados [aqui](inserts_tables/inserts.sql).
+Os comandos de inserts das tabelas do banco de dados cervejaria podem ser encontrados 
+
+[aqui](inserts_tables/inserts.sql).
 
 # consultas propostas no minimundo:
 
-As consultas podem ser encontradas [aqui](consultas.sql).
+As consultas podem ser encontradas 
+
+[aqui](consultas.sql).
 
 - Cervejas produzidas por uma cervejaria específica
+
 ![Cervejas produzidas por uma cervejaria específica](imgs/1.png)
 
 - Clientes que têm um cartão de fidelidade:
+
 ![Clientes que têm um cartão de fidelidade](imgs/2.png)
 
 - Pedidos atendidos por um garçom específico:
+
 ![Pedidos atendidos por um garçom específico](imgs/3.png)
 
 - Relatório de vendas de cerveja por cervejaria:
+
 ![Relatório de vendas de cerveja por cervejaria](imgs/4.png)
 
 - Relatório de descontos oferecidos aos aniversariantes:
+
 ![Relatório de descontos oferecidos aos aniversariantes](imgs/5.png)
 
 - Relatório de horários de trabalho dos garçons:
+
 ![Relatório de descontos oferecidos aos aniversariantes](imgs/6.png)
 
 - Relatório de responsáveis por setores:
+
 ![Relatório de descontos oferecidos aos aniversariantes](imgs/7.png)
 
 - Relatório de lideres e liderados:
+
 ![Relatório de descontos oferecidos aos aniversariantes](imgs/8.png)
