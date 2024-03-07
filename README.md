@@ -41,6 +41,8 @@ Este comando executa o seguinte:
 
 Os comandos sql para criação das tabelas pode ser encontrado [aqui](Create_tables/create.sql).
 
+Os comandos atualizados com correções se encontra [aqui](Create_tables/create_table_ajustado.sql).
+
 - Diagrama de classes ER:
 
 ![aqui](imgs/diagrama_er.png)
@@ -49,20 +51,19 @@ Os comandos sql para criação das tabelas pode ser encontrado [aqui](Create_tab
 
 # ajustes nas tabelas de Desconto & Escala:
 
-Os comandos sql para Alter Table das tabelas pode ser encontrado [aqui](Create_tables/alter_table.sql).
+Os comandos sql para Alter Table das tabelas pode ser encontrado: [Aqui](Create_tables/alter_table.sql).
 
 
 # Inserts:
 
-Os comandos de inserts das tabelas do banco de dados cervejaria podem ser encontrados 
+Os comandos de inserts das tabelas do banco de dados cervejaria podem ser encontrados: [Aqui](inserts_tables/inserts.sql).
 
-[aqui](inserts_tables/inserts.sql).
+Aqui se encontra os comandos de Updates: [Aqui](inserts_tables/update_inserts.sql).
+
 
 # consultas propostas no minimundo:
 
-As consultas podem ser encontradas 
-
-[aqui](consultas.sql).
+As consultas podem ser encontradas: [Aqui](consultas.sql).
 
 - Cervejas produzidas por uma cervejaria específica
 
