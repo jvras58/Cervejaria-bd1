@@ -27,7 +27,7 @@ ALTER TABLE Responsavel
 DROP COLUMN Horario;
 
 
--- desconto (ajustes: valor não deve ser chave primária e sim um atributo id deve ser atribuido como pk):
+-- Desconto (ajustes: valor não deve ser chave primária e sim um atributo id deve ser atribuido como pk):
 -- Ao ajustar a desconto, é necessário também modificar a referência do Aniversariante & Pedido.
 
 -- Removendo as chaves estrangeiras que referenciam a tabela Desconto

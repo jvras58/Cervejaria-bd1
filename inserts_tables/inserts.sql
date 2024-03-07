@@ -27,9 +27,11 @@ VALUES ('12345678901', 'João', NULL, '12345678901234'),
 
 
 -- Inserções para tabela Escala
-INSERT INTO Escala (Horario, CPF_garcom) 
-VALUES ('2024-03-06 10:00:00', '12345678901'),
-       ('2024-03-06 15:00:00', '98765432101');
+INSERT INTO Escala (ID, Horario, CPF_garcom) 
+VALUES (1, '2024-03-06 10:00:00', '12345678901'),
+       (2, '2024-03-06 15:00:00', '98765432101'),
+       (3, '2024-03-06 20:00:00', '55555555555'),
+       (4, '2024-03-06 20:00:00', '11111111111');
 
 -- Inserções para tabela Setor
 INSERT INTO Setor (ID, Nome, CPF_garcom) 
@@ -37,13 +39,15 @@ VALUES (1, 'Bar', '12345678901'),
        (2, 'Mesas', '98765432101'),
        -- Setor liderado por Fernanda
        (3, 'Bar Externo', '55555555555'),
+       (4, 'Bar Interno', '11111111111');
+    
 
 -- Inserções para tabela Responsavel pelo setor
 INSERT INTO Responsavel (CPF, ID, id_escala) 
 VALUES ('12345678901', 1, 1),
-       ('98765432101', 2, 2);
-       ('55555555555', 3, 2);
-       ('11111111111', 4, 2);
+       ('98765432101', 2, 2),
+       ('55555555555', 3, 3),
+       ('11111111111', 4, 4);
 
 -- Inserções para tabela Cliente
 INSERT INTO Cliente (CPF, nome, data_nascimento) 

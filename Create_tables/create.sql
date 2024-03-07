@@ -45,7 +45,7 @@ CREATE TABLE Garcom (
   FOREIGN KEY (CNPJ_cervejaria) REFERENCES Cervejaria (CNPJ) 
 );
 
--- escala((ajustes: Horario não deve ser chave primária e sim um atributo id deve ser atribuido como pk):):
+-- escala(ajustes: Horario não deve ser chave primária e sim um atributo id deve ser atribuido como pk):
 CREATE TABLE Escala ( 
   Horario TIMESTAMP, 
   CPF_garcom VARCHAR(11), 
@@ -53,13 +53,6 @@ CREATE TABLE Escala (
   FOREIGN KEY (CPF_garcom) REFERENCES Garcom (CPF) 
 );
 
--- escala atualizado com os ajustes:
--- CREATE TABLE Escala ( 
---   id SERIAL PRIMARY KEY,
---   Horario TIMESTAMP, 
---   CPF_garcom VARCHAR(11), 
---   FOREIGN KEY (CPF_garcom) REFERENCES Garcom (CPF) 
--- );
 
 -- setor:
 CREATE TABLE Setor ( 
@@ -81,17 +74,6 @@ CREATE TABLE Responsavel (
   FOREIGN KEY (Horario) REFERENCES Escala (Horario) 
 );
 
--- responsavel atualizado com os ajustes de escala:
--- CREATE TABLE Responsavel ( 
---   CPF VARCHAR(11), 
---   ID INT, 
---   id_escala INT,
---   PRIMARY KEY (CPF, ID, id_escala), 
---   FOREIGN KEY (CPF) REFERENCES Garcom (CPF), 
---   FOREIGN KEY (ID) REFERENCES Setor (ID),
---   FOREIGN KEY (id_escala) REFERENCES Escala (id)
--- );
-
 -- cliente:
 CREATE TABLE Cliente ( 
   CPF VARCHAR(11) PRIMARY KEY, 
@@ -111,12 +93,6 @@ CREATE TABLE Desconto (
   Valor DECIMAL(10,2) PRIMARY KEY 
 );
 
--- desconto ajustado:
--- CREATE TABLE Desconto ( 
---   id INT AUTO_INCREMENT PRIMARY KEY,
---   Valor DECIMAL(10,2)
--- );
-
 -- aniversariante:
 CREATE TABLE Aniversariante ( 
   CPF_cliente VARCHAR(11), 
@@ -127,17 +103,6 @@ CREATE TABLE Aniversariante (
   FOREIGN KEY (CPF_garcom) REFERENCES Garcom (CPF), 
   FOREIGN KEY (Valor) REFERENCES Desconto (Valor) 
 );
-
--- aniversariante ajustado por causa do ajuste no desconto:
--- CREATE TABLE Aniversariante ( 
---   CPF_cliente VARCHAR(11), 
---   CPF_garcom VARCHAR(11), 
---   id_desconto INT, 
---   PRIMARY KEY (CPF_cliente, CPF_garcom), 
---   FOREIGN KEY (CPF_cliente) REFERENCES Cliente (CPF), 
---   FOREIGN KEY (CPF_garcom) REFERENCES Garcom (CPF), 
---   FOREIGN KEY (id_desconto) REFERENCES Desconto (id) 
--- );
 
 -- pedido:
 CREATE TABLE Pedido ( 
@@ -150,15 +115,3 @@ CREATE TABLE Pedido (
   FOREIGN KEY (CPF_garcom) REFERENCES Garcom (CPF), 
   FOREIGN KEY (Valor) REFERENCES Desconto (Valor) 
 );
-
--- pedido ajustado por causa do ajuste no desconto:
--- CREATE TABLE Pedido ( 
---   CPF_cliente VARCHAR(11), 
---   CPF_garcom VARCHAR(11), 
---   id_desconto INT, 
---   dataPedido DATE, 
---   PRIMARY KEY (CPF_cliente, CPF_garcom, dataPedido), 
---   FOREIGN KEY (CPF_cliente) REFERENCES Cliente (CPF), 
---   FOREIGN KEY (CPF_garcom) REFERENCES Garcom (CPF), 
---   FOREIGN KEY (id_desconto) REFERENCES Desconto (id) 
--- );
